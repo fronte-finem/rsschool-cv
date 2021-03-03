@@ -21,3 +21,10 @@ My goal is to turn my hobby into real work skills. At different periods of my li
 - *basic* Python, Haskell, C#
 - *basic* Git
 - *basic* Gimp, Inkscape, Blender
+
+---
+
+### Education
+
+Reading official or not docs (MDN, Microsoft, etc.).  
+Habr, StackOverflow, GitHub, Wikipedia, Google, and so on... 😅
