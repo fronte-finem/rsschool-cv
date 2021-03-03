@@ -36,3 +36,25 @@ Habr, StackOverflow, GitHub, Wikipedia, Google, and so on... 😅
 A1 or A2 I guess.
 Good comprehension when reading, listening or watching videos.
 But weak in writing (google translate helps me 😔) and even more so in conversation.
+
+---
+
+### Code examples
+
+-
+  ```js
+  // Javascript example
+
+  function fizzbuzz(n) {
+    return [...genFizzBuzz(n)];
+  }
+
+  function* genFizzBuzz(n) {
+    for (let i=1; i<=n; i++) {
+      let x = "";
+      if (i % 3 == 0) x += "Fizz";
+      if (i % 5 == 0) x += "Buzz";
+      yield x === "" ? i : x;
+    }
+  }
+  ```
