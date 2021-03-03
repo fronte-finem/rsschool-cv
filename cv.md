@@ -28,3 +28,11 @@ My goal is to turn my hobby into real work skills. At different periods of my li
 
 Reading official or not docs (MDN, Microsoft, etc.).  
 Habr, StackOverflow, GitHub, Wikipedia, Google, and so on... 😅
+
+---
+
+### English level:
+
+A1 or A2 I guess.
+Good comprehension when reading, listening or watching videos.
+But weak in writing (google translate helps me 😔) and even more so in conversation.
