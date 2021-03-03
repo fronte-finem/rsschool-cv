@@ -84,3 +84,21 @@ But weak in writing (google translate helps me 😔) and even more so in convers
       $links | ForEach-Object {extractData $_}
   }
   ```
+
+-
+  ```haskell
+  -- Haskell example
+
+  module MyShow ( formatPath, showLeafs ) where
+
+  import Data.List ( intercalate )
+  import Types ( Section, sectionLeafsPaths, getTitle, formatId )
+
+  showLeafs :: Section -> String
+  showLeafs = unlines . map formatPath . sectionLeafsPaths
+
+  formatPath :: [Section] -> String
+  formatPath =  (++) <$> formatIds <*> (":  "++) . formatTitles where
+      formatIds    = intercalate "." . map formatId
+      formatTitles = intercalate " / " . map getTitle
+  ```
