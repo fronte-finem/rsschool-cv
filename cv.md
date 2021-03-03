@@ -58,3 +58,29 @@ But weak in writing (google translate helps me 😔) and even more so in convers
     }
   }
   ```
+
+-
+  ```powershell
+  # Powershell example
+
+  function Get-YoutubePlaylistLinks ([uri]$ytPlaylistUrl) {
+      Write-Host "Scraping playlist: " -ForegroundColor DarkBlue -NoNewline
+      Write-Host "$ytPlaylistUrl" -ForegroundColor DarkCyan
+      $response = Invoke-WebRequest -UseBasicParsing -Uri $ytPlaylistUrl
+      $baseUrl = "$($ytPlaylistUrl.Scheme)://$($ytPlaylistUrl.Host)"
+      $fragments = $response.Content -split '<'
+
+      $links = $fragments | Select-String -Pattern 'video-title-link'
+      $links = $links | ForEach-Object {$_ -replace '.*href="([^&]+).*', '$1'}
+
+      function extractData ([string]$link) {
+          $data = $link.Trim() -split "`n"
+          [PSCustomObject]@{
+              link = [uri]"$baseUrl$($data[0])"
+              title = $data[1].Trim()
+          }
+      }
+
+      $links | ForEach-Object {extractData $_}
+  }
+  ```
