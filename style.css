@@ -54,3 +54,32 @@ ul {
   padding: 0 10px;
   padding-top: 70px;
 }
+
+
+/*
+  Colors
+ */
+
+:root {
+  --color-main1: #fff;
+  --color-main2: #f90;
+  --color-main3: #222;
+  --color-shadow: rgba(0,0,0,0.3);
+  --color-outline: rgba(0,0,0,0.8);
+}
+
+.cv-page,
+.cv-main { background-color: var(--color-main1); }
+.cv-side { background-color: var(--color-main2); }
+
+.cv-header,
+.cv-footer {
+  background-color: var(--color-main2);
+  background-image: linear-gradient(to left,
+    var(--color-main2),
+    var(--color-main2) var(--w-side),
+    var(--color-main1) 80%, var(--color-main1)
+  );
+}
+
+.cv-container { box-shadow: 0 0 10px 0px var(--color-shadow); }
