@@ -33,10 +33,10 @@ Mostly RTFM 😅 learning style: official or not docs (MDN, Microsoft, etc.), Ha
 
 ### English level (A1/A2):
 
-📖 Reading: 4/5
-📝 Writing: 2/5
-👂 Listening: 3/5
-🙊 Speaking: 1/5
+- 📖 Reading: 4/5
+- 📝 Writing: 2/5
+- 👂 Listening: 3/5
+- 🙊 Speaking: 1/5
 
 ---
 
