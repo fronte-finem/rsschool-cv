@@ -99,6 +99,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
+pre,
+code {
+  font-family: 'Fira Code', Monaco, Lucida Console, Terminal, monospace;
+}
+
 
 /*******************************************************************************
   Header
@@ -384,4 +389,36 @@ h1, h2, h3, h4, h5, h6 {
 
 .cv-education__content {
   line-height: 1.5em;
+}
+
+/* Main: Code examples */
+
+.cv-code__list {
+  list-style: none;
+  max-width: 100%;
+}
+
+.cv-code__example {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.cv-code__example::backdrop {
+  background-color: rgba(0,0,0,0.9);
+}
+
+.cv-code__example pre {
+  margin: 0;
+  padding: 8px 15px;
+  border-radius: 5px;
+  background: var(--color-main3);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.cv-code__example code {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  text-shadow: 0px 1px 0px #000;
 }
