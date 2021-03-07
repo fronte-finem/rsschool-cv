@@ -418,14 +418,16 @@ code {
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px var(--color-shadow);
+  filter: hue-rotate(0deg);
+  transition: filter 0.5s ease;
 }
 
 .cv-code__btn-show:hover {
-  filter: contrast(1.5);
+  filter: hue-rotate(-45deg);
 }
 
 .cv-code__btn-show:active {
-  filter: invert(1);
+  filter: hue-rotate(-90deg);
   box-shadow: 0 5px var(--color-main1);
   transform: translateY(4px);
 }
@@ -436,35 +438,37 @@ code {
   height: 100px;
 }
 
-/* Main: Code examples -> Modal window */
 
-.cv-code__example {
-  position: relative;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: rgba(0,0,0,0.5);
+/*******************************************************************************
+  Modal window
+*******************************************************************************/
+
+.cv-modal {
+  display: none;
 }
-
-.cv-code__example::backdrop {
+.cv-modal--visible {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  user-select: none;
   background-color: rgba(0,0,0,0.9);
 }
 
-.cv-code__example pre {
-  margin: 0;
-  padding: 8px 15px;
-  border-radius: 5px;
-  background: var(--color-main3);
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+.cv-modal__window {
+  z-index: 10;
+  position: relative;
+  max-height: 80vh;
+  user-select: text;
 }
 
-.cv-code__example code {
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  text-shadow: 0px 1px 0px #000;
-}
-
-.cv-code__btn-close {
+.cv-modal__close {
+  z-index: 90;
   cursor: pointer;
   width: 50px;
   height: 50px;
@@ -477,12 +481,14 @@ code {
   border: none;
   border-bottom-left-radius: 100%;
   background-color: var(--color-main2);
+  filter: hue-rotate(0deg);
+  transition: filter 0.5s ease;
 }
 
-.cv-code__btn-close:hover  { filter: contrast(1.5); }
-.cv-code__btn-close:active { filter: invert(1); }
+.cv-modal__close:hover  { filter: hue-rotate(-45deg); }
+.cv-modal__close:active { filter: hue-rotate(-90deg); }
 
-.cv-code__btn-close::before {
+.cv-modal__close::before {
   content: "❌";
   position: absolute;
   top: 2px;
@@ -490,4 +496,22 @@ code {
   font-size: 33px;
   line-height: 33px;
   letter-spacing: -6px;
+}
+
+.cv-modal__content {
+  z-index: 20;
+  position: relative;
+}
+
+.cv-modal__content pre {
+  margin: 0;
+  padding: 8px 25px;
+  border-radius: 15px;
+  background: var(--color-main3);
+}
+
+.cv-modal__content code {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
 }

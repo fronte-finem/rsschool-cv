@@ -47,37 +47,33 @@
               <button class="cv-code__btn-show" id="cv-code-show-js">
                 Show <img src="./img/logo/JavaScript.svg" alt="logo JavaScript">
               </button>
+              <template class="cv-code__example"
+                      id="cv-code-ex-js"
+                      data-cv-code-lang="JavaScript"
+                      data-cv-code-src="./code-examples/example-javascript.html">
+              </template>
             </li>
             <li class="cv-code__item">
               <button class="cv-code__btn-show" id="cv-code-show-ps">
                 Show <img src="./img/logo/PowerShell.svg" alt="logo PowerShell">
               </button>
+              <template class="cv-code__example"
+                      id="cv-code-ex-ps"
+                      data-cv-code-lang="Powershell"
+                      data-cv-code-src="./code-examples/example-powershell.html">
+              </template>
             </li>
             <li class="cv-code__item">
               <button class="cv-code__btn-show" id="cv-code-show-hs">
                 Show <img src="./img/logo/Haskell.svg" alt="logo Haskell">
               </button>
+              <template class="cv-code__example"
+                      id="cv-code-ex-hs"
+                      data-cv-code-lang="Haskell"
+                      data-cv-code-src="./code-examples/example-haskell.html">
+              </template>
             </li>
           </ul>
-
-          <dialog class="cv-code__example"
-                  id="cv-code-ex-js"
-                  data-cv-code-lang="JavaScript"
-                  data-cv-code-src="./code-examples/example-javascript.html">
-            <button class="cv-code__btn-close"></button>
-          </dialog>
-          <dialog class="cv-code__example"
-                  id="cv-code-ex-ps"
-                  data-cv-code-lang="Powershell"
-                  data-cv-code-src="./code-examples/example-powershell.html">
-            <button class="cv-code__btn-close"></button>
-          </dialog>
-          <dialog class="cv-code__example"
-                  id="cv-code-ex-hs"
-                  data-cv-code-lang="Haskell"
-                  data-cv-code-src="./code-examples/example-haskell.html">
-            <button class="cv-code__btn-close"></button>
-          </dialog>
         </section>
       </main>
 
@@ -253,6 +249,15 @@
           <time class="cv-update__date" datetime="2021-03-07">Marth 7<br>2021</time>
         </section>
       </footer>
+    </div>
+
+    <div class="cv-modal" id="cv-modal">
+      <div class="cv-modal__window">
+        <button class="cv-modal__close"></button>
+        <div class="cv-modal__content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+      </div>
     </div>
 
     <script src="./code-examples/loader.js"></script>
