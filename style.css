@@ -396,7 +396,48 @@ code {
 .cv-code__list {
   list-style: none;
   max-width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
+
+.cv-code__item {
+  margin: 20px;
+}
+
+.cv-code__btn-show {
+  display: block;
+  width: 150px;
+  height: 150px;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: var(--color-main1);
+  background-color: var(--color-main2);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px var(--color-shadow);
+}
+
+.cv-code__btn-show:hover {
+  filter: contrast(1.5);
+}
+
+.cv-code__btn-show:active {
+  filter: invert(1);
+  box-shadow: 0 5px var(--color-main1);
+  transform: translateY(4px);
+}
+
+.cv-code__btn-show img {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
+/* Main: Code examples -> Modal window */
 
 .cv-code__example {
   position: relative;
@@ -420,7 +461,7 @@ code {
   padding: 8px 15px;
   border-radius: 5px;
   background: var(--color-main3);
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
 }
 
 .cv-code__example code {
