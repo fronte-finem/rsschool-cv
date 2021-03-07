@@ -143,3 +143,77 @@ h1, h2, h3, h4, h5, h6 {
 .cv-my__photo img:hover {
   transform: rotate(-360deg);
 }
+
+
+/*
+  Footer
+ */
+
+.cv-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cv-contacts { width: 200px; }
+.cv-rsschool { width: 300px; }
+.cv-update   { width: 140px; }
+
+.cv-footer h2 {
+  padding: 3px 10px;
+  text-align: center;
+  font-size: 1.3em;
+  box-shadow: var(--outline);
+}
+
+.cv-contacts__list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.cv-contacts__link img {
+  height: 50px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.cv-contacts__link img:hover {
+  transform: scale(1.1) rotate(-10deg);
+}
+
+.cv-rsschool {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em 0;
+  border-radius: 20px;
+  background-image:
+    repeating-linear-gradient(135deg,
+      transparent,
+      transparent 5px,
+      var(--color-shadow) 5px,
+      var(--color-shadow) 10px
+    ),
+    linear-gradient(135deg,
+      var(--color-main2),
+      var(--color-main1)
+    );
+  box-shadow: inset 0 0 10px 0 var(--color-outline);
+}
+
+.cv-rsschool__link img {
+  height: 70px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.cv-rsschool__link img:hover {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.cv-update {
+  text-align: center;
+}
+
+.cv-update__date {
+  font-size: 30px;
+  font-weight: 300;
+}
