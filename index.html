@@ -7,6 +7,7 @@
     <title>RSSchool CV</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" href="./code-examples/code-highlight.css">
   </head>
 
   <body class="cv-page">
@@ -36,6 +37,38 @@
             Mostly <abbr title="read the fucking manual">RTFM</abbr> 😅 learning style: official or not docs (MDN, Microsoft, etc.),
             Habr, StackOverflow, GitHub, Wikipedia, Google, and so on...
           </p>
+        </section>
+
+        <section class="cv-code">
+          <h2 class="cv-code__title">Code examples</h2>
+
+          <ul class="cv-code__list">
+            <li class="cv-code__item">
+              <button class="cv-code__btn-show" id="cv-code-show-js">Show JavaScript example</button>
+            </li>
+            <li class="cv-code__item">
+              <button class="cv-code__btn-show" id="cv-code-show-ps">Show Powershell example</button>
+            </li>
+            <li class="cv-code__item">
+              <button class="cv-code__btn-show" id="cv-code-show-hs">Show Haskell example</button>
+            </li>
+          </ul>
+
+          <dialog class="cv-code__example"
+                  id="cv-code-ex-js"
+                  data-cv-code-lang="JavaScript"
+                  data-cv-code-src="./code-examples/example-javascript.html">
+          </dialog>
+          <dialog class="cv-code__example"
+                  id="cv-code-ex-ps"
+                  data-cv-code-lang="Powershell"
+                  data-cv-code-src="./code-examples/example-powershell.html">
+          </dialog>
+          <dialog class="cv-code__example"
+                  id="cv-code-ex-hs"
+                  data-cv-code-lang="Haskell"
+                  data-cv-code-src="./code-examples/example-haskell.html">
+          </dialog>
         </section>
       </main>
 
@@ -212,5 +245,7 @@
         </section>
       </footer>
     </div>
+
+    <script src="./code-examples/loader.js"></script>
   </body>
 </html>
