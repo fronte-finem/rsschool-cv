@@ -116,7 +116,17 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 70px;
   font-weight: 900;
   background-color: var(--color-main2);
-  background-image: linear-gradient(90deg, var(--color-main2), var(--color-main3));
+  background-image:
+    repeating-linear-gradient(45deg,
+      transparent,
+      transparent 5px,
+      var(--color-shadow) 5px,
+      var(--color-shadow) 10px
+    ),
+    linear-gradient(90deg,
+      var(--color-main2),
+      var(--color-main3)
+    );
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
