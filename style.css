@@ -405,12 +405,11 @@ code {
 }
 
 .cv-code__btn-show {
-  display: block;
+  cursor: pointer;
   width: 150px;
   height: 150px;
   padding: 15px 25px;
   font-size: 24px;
-  cursor: pointer;
   text-align: center;
   text-decoration: none;
   outline: none;
@@ -446,12 +445,6 @@ code {
   background-color: rgba(0,0,0,0.5);
 }
 
-.cv-code__btn-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
 .cv-code__example::backdrop {
   background-color: rgba(0,0,0,0.9);
 }
@@ -469,4 +462,32 @@ code {
   padding: 0;
   font-size: 16px;
   text-shadow: 0px 1px 0px #000;
+}
+
+.cv-code__btn-close {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  border-bottom-left-radius: 100%;
+  background-color: var(--color-main2);
+}
+
+.cv-code__btn-close:hover  { filter: contrast(1.5); }
+.cv-code__btn-close:active { filter: invert(1); }
+
+.cv-code__btn-close::before {
+  content: "❌";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  font-size: 33px;
+  line-height: 33px;
+  letter-spacing: -6px;
 }
