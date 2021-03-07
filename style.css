@@ -1,0 +1,56 @@
+/*
+  Init
+ */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+
+/*
+  Layout
+ */
+
+ :root {
+  --w-all: 800px;
+  --w-side: 240px;
+  --h-header: 150px;
+  --h-footer: 150px;
+}
+
+.cv-container {
+  width: var(--w-all);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr var(--w-side);
+  grid-template-rows:
+    var(--h-header)
+    minmax(calc(100vh - var(--h-header) - var(--h-footer)), auto)
+    var(--h-footer);
+  grid-template-areas:
+    "header header"
+    "main   side"
+    "footer footer";
+}
+
+.cv-main   { grid-area: main; }
+.cv-side   { grid-area: side; }
+.cv-header { grid-area: header; }
+.cv-footer { grid-area: footer; }
+
+.cv-main,
+.cv-header,
+.cv-footer {
+  padding: 0 30px;
+}
+.cv-side {
+  padding: 0 10px;
+  padding-top: 70px;
+}
