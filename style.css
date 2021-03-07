@@ -285,3 +285,58 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Side: English */
 
+.cv-english__list {
+  margin: 0 10px;
+}
+
+.cv-english__item {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.cv-english__item .cv-icon {
+  display: inline-block;
+  width: 25px;
+}
+
+.cv-english__item .cv-rate {
+  position: absolute;
+  right: 0;
+}
+
+.cv-english__item .cv-rate::before {
+  --o: #fff, #fff 40%, transparent 50%;
+  --x: #ff0, #ff0 60%, transparent 70%;
+  --o1: radial-gradient(circle closest-side at 10%, var(--o));
+  --o2: radial-gradient(circle closest-side at 30%, var(--o));
+  --o3: radial-gradient(circle closest-side at 50%, var(--o));
+  --o4: radial-gradient(circle closest-side at 70%, var(--o));
+  --o5: radial-gradient(circle closest-side at 90%, var(--o));
+  --x1: radial-gradient(circle closest-side at 10%, var(--x));
+  --x2: radial-gradient(circle closest-side at 30%, var(--x));
+  --x3: radial-gradient(circle closest-side at 50%, var(--x));
+  --x4: radial-gradient(circle closest-side at 70%, var(--x));
+  --x5: radial-gradient(circle closest-side at 90%, var(--x));
+  --r0: var(--o1), var(--o2), var(--o3), var(--o4), var(--o5);
+  --r1: var(--x1), var(--o2), var(--o3), var(--o4), var(--o5);
+  --r2: var(--x1), var(--x2), var(--o3), var(--o4), var(--o5);
+  --r3: var(--x1), var(--x2), var(--x3), var(--o4), var(--o5);
+  --r4: var(--x1), var(--x2), var(--x3), var(--x4), var(--o5);
+  --r5: var(--x1), var(--x2), var(--x3), var(--x4), var(--x5);
+}
+
+.cv-english__item .cv-rate::before {
+  content: "";
+  display: block;
+  height: 20px;
+  width: 100px;
+  background-image: var(--r0);
+}
+
+.cv-english__item .cv-rate--0::before { background-image: var(--r0); }
+.cv-english__item .cv-rate--1::before { background-image: var(--r1); }
+.cv-english__item .cv-rate--2::before { background-image: var(--r2); }
+.cv-english__item .cv-rate--3::before { background-image: var(--r3); }
+.cv-english__item .cv-rate--4::before { background-image: var(--r4); }
+.cv-english__item .cv-rate--5::before { background-image: var(--r5); }
+
