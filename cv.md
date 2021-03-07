@@ -5,37 +5,38 @@
 ### Contacts
 
 email: [fronte.finem+rsschool.cv@ya.ru](mailto:fronte.finem+rsschool.cv@ya.ru)
+github: [fronte-finem](https://github.com/fronte-finem/)
 
 ---
 
-### About myself
+### About me
 
-My goal is to turn my hobby into real work skills. At different periods of my life, I have played with various programming languages mainly for automate or hack other's web or descktop apps. Now I want to become a creator and start my IT career as a web developer. 😤
+My goal is to turn my hobby into real work skills. At different periods of my life, I have played with various programming languages mainly for automate or hack other's web or descktop apps. Now I want to become a creator 😤 and start my IT career as a web developer.
 
 ---
 
-### Skills
+### Skills (hobby level)
 
-- *basic* HTML, CSS, JS
-- *basic* Autohotkey, Powershell
-- *basic* Python, Haskell, C#
-- *basic* Git
-- *basic* Gimp, Inkscape, Blender
+- HTML, CSS, JS
+- Autohotkey, Powershell
+- Python, Haskell, C#
+- Git
+- Gimp, Inkscape, Blender
 
 ---
 
 ### Education
 
-Reading official or not docs (MDN, Microsoft, etc.).  
-Habr, StackOverflow, GitHub, Wikipedia, Google, and so on... 😅
+Mostly RTFM 😅 learning style: official or not docs (MDN, Microsoft, etc.), Habr, StackOverflow, GitHub, Wikipedia, Google, and so on...
 
 ---
 
-### English level:
+### English level (A1/A2):
 
-A1 or A2 I guess.
-Good comprehension when reading, listening or watching videos.
-But weak in writing (google translate helps me 😔) and even more so in conversation.
+📖 Reading: 4/5
+📝 Writing: 2/5
+👂 Listening: 3/5
+🙊 Speaking: 1/5
 
 ---
 
