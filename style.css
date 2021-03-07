@@ -66,6 +66,7 @@ ul {
   --color-main3: #222;
   --color-shadow: rgba(0,0,0,0.3);
   --color-outline: rgba(0,0,0,0.8);
+  --outline: 0 0 0 2px var(--color-outline);
 }
 
 .cv-page,
@@ -96,4 +97,49 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
+}
+
+
+/*
+  Header
+ */
+
+.cv-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cv-my__name {
+  display: inline-block;
+  margin: 0;
+  font-size: 70px;
+  font-weight: 900;
+  background-color: var(--color-main2);
+  background-image: linear-gradient(90deg, var(--color-main2), var(--color-main3));
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 1px rgba(0,0,0,0.1);
+}
+
+.cv-my__photo {
+  position: absolute;
+  right: 60px;
+  top: 10px;
+  margin: 0;
+  padding: 7px;
+  border-radius: 50%;
+  box-shadow: var(--outline);
+}
+
+.cv-my__photo img {
+  display: block;
+  border-radius: 50%;
+  box-shadow: var(--outline);
+  transition: transform 2s ease;
+}
+
+.cv-my__photo img:hover {
+  transform: rotate(-360deg);
 }
