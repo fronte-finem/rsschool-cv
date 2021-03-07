@@ -399,9 +399,16 @@ code {
 }
 
 .cv-code__example {
+  position: relative;
   padding: 10px;
   border-radius: 5px;
   background-color: rgba(0,0,0,0.5);
+}
+
+.cv-code__btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .cv-code__example::backdrop {
