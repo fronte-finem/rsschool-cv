@@ -1,0 +1,26 @@
+<pre class="highlight">
+<code>
+<span class="c"># Powershell example</span><span class="w">
+
+</span><span class="kr">function</span><span class="w"> </span><span class="nf">Get-YoutubePlaylistLinks</span><span class="w"> </span><span class="p">([</span><span class="n">uri</span><span class="p">]</span><span class="nv">$ytPlaylistUrl</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">Write-Host</span><span class="w"> </span><span class="s2">"Scraping playlist: "</span><span class="w"> </span><span class="nt">-ForegroundColor</span><span class="w"> </span><span class="nx">DarkBlue</span><span class="w"> </span><span class="nt">-NoNewline</span><span class="w">
+    </span><span class="n">Write-Host</span><span class="w"> </span><span class="s2">"</span><span class="nv">$ytPlaylistUrl</span><span class="s2">"</span><span class="w"> </span><span class="nt">-ForegroundColor</span><span class="w"> </span><span class="nx">DarkCyan</span><span class="w">
+    </span><span class="nv">$response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Invoke-WebRequest</span><span class="w"> </span><span class="nt">-UseBasicParsing</span><span class="w"> </span><span class="nt">-Uri</span><span class="w"> </span><span class="nv">$ytPlaylistUrl</span><span class="w">
+    </span><span class="nv">$baseUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"</span><span class="si">$(</span><span class="nv">$ytPlaylistUrl</span><span class="o">.</span><span class="nf">Scheme</span><span class="si">)</span><span class="s2">://</span><span class="si">$(</span><span class="nv">$ytPlaylistUrl</span><span class="o">.</span><span class="nf">Host</span><span class="si">)</span><span class="s2">"</span><span class="w">
+    </span><span class="nv">$fragments</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$response</span><span class="o">.</span><span class="nf">Content</span><span class="w"> </span><span class="o">-split</span><span class="w"> </span><span class="s1">'&lt;'</span><span class="w">
+
+    </span><span class="nv">$links</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$fragments</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Select-String</span><span class="w"> </span><span class="nt">-Pattern</span><span class="w"> </span><span class="s1">'video-title-link'</span><span class="w">
+    </span><span class="nv">$links</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$links</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">ForEach-Object</span><span class="w"> </span><span class="p">{</span><span class="bp">$_</span><span class="w"> </span><span class="o">-replace</span><span class="w"> </span><span class="s1">'.*href="([^&amp;]+).*'</span><span class="p">,</span><span class="w"> </span><span class="s1">'$1'</span><span class="p">}</span><span class="w">
+
+    </span><span class="kr">function</span><span class="w"> </span><span class="nf">extractData</span><span class="w"> </span><span class="p">([</span><span class="n">string</span><span class="p">]</span><span class="nv">$link</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nv">$data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$link</span><span class="o">.</span><span class="nf">Trim</span><span class="p">()</span><span class="w"> </span><span class="o">-split</span><span class="w"> </span><span class="s2">"</span><span class="se">`n</span><span class="s2">"</span><span class="w">
+        </span><span class="p">[</span><span class="n">PSCustomObject</span><span class="p">]@{</span><span class="w">
+            </span><span class="nx">link</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">uri</span><span class="p">]</span><span class="s2">"</span><span class="nv">$baseUrl</span><span class="si">$(</span><span class="nv">$data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">)</span><span class="s2">"</span><span class="w">
+            </span><span class="nx">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="nx">Trim</span><span class="si">()</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+    </span><span class="nv">$links</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">ForEach-Object</span><span class="w"> </span><span class="p">{</span><span class="n">extractData</span><span class="w"> </span><span class="bp">$_</span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w"></span>
+</code>
+</pre>

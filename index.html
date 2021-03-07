@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSSchool CV</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" href="./code-examples/code-highlight.css">
+  </head>
+
+  <body class="cv-page">
+    <div class="cv-container">
+      <header class="cv-header">
+        <section class="cv-my">
+          <h1 class="cv-my__name">Fronte Finem</h1>
+          <figure class="cv-my__photo">
+            <img src="./img/my-photo.jpg" alt="My CV photo">
+          </figure>
+        </section>
+      </header>
+
+      <main class="cv-main">
+        <section class="cv-about-me">
+          <h2 class="cv-about-me__title">About me</h2>
+          <p class="cv-about-me__content">
+            My goal is to turn my hobby into real work skills. At different periods of my life, I have played with
+            various programming languages mainly for automate or hack other's web or descktop apps. Now I want to
+            become a creator 😤 and start my IT career as a web developer.
+          </p>
+        </section>
+
+        <section class="cv-education">
+          <h2 class="cv-education__title">Education</h2>
+          <p class="cv-education__content">
+            Mostly <abbr title="read the fucking manual">RTFM</abbr> 😅 learning style: official or not docs (MDN, Microsoft, etc.),
+            Habr, StackOverflow, GitHub, Wikipedia, Google, and so on...
+          </p>
+        </section>
+
+        <section class="cv-code">
+          <h2 class="cv-code__title">Code examples</h2>
+
+          <ul class="cv-code__list">
+            <li class="cv-code__item">
+              <button class="cv-code__btn-show" id="cv-code-show-js">
+                Show <img src="./img/logo/JavaScript.svg" alt="logo JavaScript">
+              </button>
+              <template class="cv-code__example"
+                      id="cv-code-ex-js"
+                      data-cv-code-lang="JavaScript"
+                      data-cv-code-src="./code-examples/example-javascript.html">
+              </template>
+            </li>
+            <li class="cv-code__item">
+              <button class="cv-code__btn-show" id="cv-code-show-ps">
+                Show <img src="./img/logo/PowerShell.svg" alt="logo PowerShell">
+              </button>
+              <template class="cv-code__example"
+                      id="cv-code-ex-ps"
+                      data-cv-code-lang="Powershell"
+                      data-cv-code-src="./code-examples/example-powershell.html">
+              </template>
+            </li>
+            <li class="cv-code__item">
+              <button class="cv-code__btn-show" id="cv-code-show-hs">
+                Show <img src="./img/logo/Haskell.svg" alt="logo Haskell">
+              </button>
+              <template class="cv-code__example"
+                      id="cv-code-ex-hs"
+                      data-cv-code-lang="Haskell"
+                      data-cv-code-src="./code-examples/example-haskell.html">
+              </template>
+            </li>
+          </ul>
+        </section>
+      </main>
+
+      <aside class="cv-side">
+        <section class="cv-skills">
+          <h2 class="cv-skills__title">Skills (hobby level)</h2>
+
+          <ul class="cv-skills__list">
+            <li class="cv-skills__item">
+              <section class="cv-skills__category">
+                <h3 class="cv-category__title">Web Front-End</h3>
+                <ul class="cv-category__list">
+                  <li class="cv-category__item">
+                    <a href="https://www.w3schools.com/html/default.asp" title="HTML">
+                      <img src="./img/logo/HTML.svg" alt="logo HTML">
+                    </a>
+                  </li>
+                  <li class="cv-category__item">
+                    <a href="https://www.w3schools.com/css/default.asp" title="CSS">
+                      <img src="./img/logo/CSS.svg" alt="logo CSS">
+                    </a>
+                  </li>
+                  <li class="cv-category__item">
+                    <a href="https://www.w3schools.com/js/DEFAULT.asp" title="JavaScript">
+                      <img src="./img/logo/JavaScript.svg" alt="logo JavaScript">
+                    </a>
+                  </li>
+                </ul>
+              </section>
+            </li>
+
+            <li class="cv-skills__item">
+              <section class="cv-skills__category">
+                <h3 class="cv-category__title">Software automation</h3>
+                <ul class="cv-category__list">
+                  <li class="cv-category__item">
+                    <a href="https://www.autohotkey.com/" title="AutoHotkey">
+                      <img src="./img/logo/AutoHotkey.svg" alt="logo AutoHotkey">
+                    </a>
+                  </li>
+                  <li class="cv-category__item">
+                    <a href="https://docs.microsoft.com/en-us/powershell/" title="PowerShell">
+                      <img src="./img/logo/PowerShell.svg" alt="logo PowerShell">
+                    </a>
+                  </li>
+                </ul>
+              </section>
+            </li>
+
+            <li class="cv-skills__item">
+              <section class="cv-skills__category">
+                <h3 class="cv-category__title">General purpose</h3>
+                <ul class="cv-category__list">
+                  <li class="cv-category__item">
+                    <a href="https://www.python.org/" title="Python">
+                      <img src="./img/logo/Python.svg" alt="logo Python">
+                    </a>
+                  </li>
+                  <li class="cv-category__item">
+                    <a href="https://www.haskell.org/" title="Haskell">
+                      <img src="./img/logo/Haskell.svg" alt="logo Haskell">
+                    </a>
+                  </li>
+                  <li class="cv-category__item">
+                    <a href="https://docs.microsoft.com/en-us/dotnet/csharp/" title="C#">
+                      <img src="./img/logo/CSharp.svg" alt="logo C#">
+                    </a>
+                  </li>
+                </ul>
+              </section>
+            </li>
+
+            <li class="cv-skills__item">
+              <section class="cv-skills__category">
+                <h3 class="cv-category__title">Other software</h3>
+                <ul class="cv-category__list">
+                  <li class="cv-category__item">
+                    <a href="https://code.visualstudio.com/" title="VSCode">
+                      <img src="./img/logo/VSCode.svg" alt="logo VSCode">
+                    </a>
+                  </li>
+                  <li class="cv-category__item">
+                    <a href="https://www.sublimetext.com/" title="Sublime Text">
+                      <img src="./img/logo/SublimeText.svg" alt="logo Sublime Text">
+                    </a>
+                  </li>
+                  <li class="cv-category__item">
+                    <a href="https://git-scm.com/" title="Git">
+                      <img src="./img/logo/Git.svg" alt="logo Git">
+                    </a>
+                  </li>
+                </ul>
+              </section>
+            </li>
+
+            <li class="cv-skills__item">
+              <section class="cv-skills__category">
+                <h3 class="cv-category__title">Graphics editors</h3>
+                <ul class="cv-category__list">
+                  <li class="cv-category__item">
+                    <a href="https://www.gimp.org/" title="Gimp">
+                      <img src="./img/logo/Gimp.svg" alt="logo Gimp">
+                    </a>
+                  </li>
+                  <li class="cv-category__item">
+                    <a href="https://inkscape.org/" title="Inkscape">
+                      <img src="./img/logo/Inkscape.svg" alt="logo Inkscape">
+                    </a>
+                  </li>
+                  <li class="cv-category__item">
+                    <a href="https://www.blender.org/" title="Blender">
+                      <img src="./img/logo/Blender.svg" alt="logo Blender">
+                    </a>
+                  </li>
+                </ul>
+              </section>
+            </li>
+          </ul>
+        </section>
+
+        <section class="cv-english">
+          <h2 class="cv-english__title">English level (A1/A2)</h2>
+          <ul class="cv-english__list">
+            <li class="cv-english__item">
+              <span class="cv-icon">📖</span>
+              Reading
+              <span class="cv-rate cv-rate--4"></span>
+            </li>
+            <li class="cv-english__item">
+              <span class="cv-icon">📝</span>
+              Writing
+              <span class="cv-rate cv-rate--2"></span>
+            </li>
+            <li class="cv-english__item">
+              <span class="cv-icon">👂</span>
+              Listening
+              <span class="cv-rate cv-rate--3"></span>
+            </li>
+            <li class="cv-english__item">
+              <span class="cv-icon">🙊</span>
+              Speaking
+              <span class="cv-rate cv-rate--1"></span>
+            </li>
+          </ul>
+        </section>
+      </aside>
+
+      <footer class="cv-footer">
+        <section class="cv-contacts">
+          <h2 class="cv-contacts__title">Contacts</h2>
+          <ul class="cv-contacts__list">
+            <li class="cv-contacts__item">
+              <a href="mailto:fronte.finem+rsschool.cv@ya.ru" title="fronte.finem+rsschool.cv@ya.ru">
+                <img src="./img/logo/Yandex-Mail.svg" alt="logo Yandex-Mail">
+              </a>
+            </li>
+            <li class="cv-contacts__item">
+              <a href="https://github.com/fronte-finem/rsschool-cv/" title="GitHub | fronte-finem | rsschool-cv">
+                <img src="./img/logo/GitHub.svg" alt="logo GitHub">
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <div class="cv-rsschool">
+          <a href="https://rs.school/js/" title="RS School JS">
+            <img src="./img/logo/RS-School-JS.svg" alt="logo RSSchool">
+          </a>
+        </div>
+
+        <section class="cv-update">
+          <h2 class="cv-update__title">Update</h2>
+          <time class="cv-update__date" datetime="2021-03-07">Marth 7<br>2021</time>
+        </section>
+      </footer>
+    </div>
+
+    <div class="cv-modal" id="cv-modal">
+      <div class="cv-modal__window">
+        <button class="cv-modal__close"></button>
+        <div class="cv-modal__content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./code-examples/loader.js"></script>
+  </body>
+</html>
