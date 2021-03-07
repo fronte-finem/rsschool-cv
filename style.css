@@ -340,3 +340,48 @@ h1, h2, h3, h4, h5, h6 {
 .cv-english__item .cv-rate--4::before { background-image: var(--r4); }
 .cv-english__item .cv-rate--5::before { background-image: var(--r5); }
 
+
+/*******************************************************************************
+  Main
+*******************************************************************************/
+
+.cv-main h2 {
+  display: inline-block;
+  margin-left: -15px;
+  padding: 3px 10px;
+  box-shadow: 0 0 0 2px var(--color-outline);
+}
+
+/* Main: About me */
+
+.cv-about-me {
+  position: relative;
+  margin-top: 30px;
+  padding: 20px 0;
+  background-image: radial-gradient(circle closest-side at 40%,
+    var(--color-main2),
+    var(--color-main2) 99%,
+    transparent 100%
+  );
+}
+
+.cv-about-me__content {
+  line-height: 1.5em;
+}
+
+/* Main: Education */
+
+.cv-education {
+  position: relative;
+  margin-top: 20px;
+  padding: 10px 0;
+  background-image: radial-gradient(circle closest-side at 70%,
+    var(--color-main2),
+    var(--color-main2) 77%,
+    transparent 78%
+  );
+}
+
+.cv-education__content {
+  line-height: 1.5em;
+}
