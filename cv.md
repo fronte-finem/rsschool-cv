@@ -4,8 +4,8 @@
 
 ### Contacts
 
-email: [fronte.finem+rsschool.cv@ya.ru](mailto:fronte.finem+rsschool.cv@ya.ru)
-github: [fronte-finem](https://github.com/fronte-finem/)
+- email: [fronte.finem+rsschool.cv@ya.ru](mailto:fronte.finem+rsschool.cv@ya.ru)
+- github: [fronte-finem](https://github.com/fronte-finem/)
 
 ---
 
